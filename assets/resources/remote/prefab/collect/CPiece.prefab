@@ -55,8 +55,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        150,
-        -225,
+        0,
+        0,
         0,
         0,
         0,
@@ -201,7 +201,7 @@
       }
     ],
     "_spriteFrame": {
-      "__uuid__": "80da6ea4-5d43-4794-b29b-262203e9e36b"
+      "__uuid__": "19033048-d235-4efc-8abb-088b7f1ed25e"
     },
     "_type": 2,
     "_segments": 64,

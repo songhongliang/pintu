@@ -5,7 +5,7 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
-import CPiece from "./CPiece";
+import CPiece from "./CEffectPiece";
 import CPieceMgr from "./CPieceMgr";
 
 const {ccclass, property} = cc._decorator;
@@ -14,6 +14,9 @@ const {ccclass, property} = cc._decorator;
 export default class CGame extends cc.Component {
     @property(cc.Node)
     nodeBg:cc.Node = null;
+
+    @property(cc.Node)
+    grayBg:cc.Node = null;
 
     @property(cc.Prefab)
     prefabPiece:cc.Prefab = null;
@@ -26,14 +29,18 @@ export default class CGame extends cc.Component {
 
     private _col:number = 2;
     private _row:number = 3;
-    private _bgWidth:number = 604;
-    private _bgHeight:number = 910;
+    private _bgWidth:number = 0;
+    private _bgHeight:number = 0;
     private _piecePos:any[] = [];//拼图位置
     private _mgrScale:number = 0.37;//管理器上缩放
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {}
+    onLoad () {
+        cc.dynamicAtlasManager.enabled = false;
+        this._bgWidth = this.grayBg.width;
+        this._bgHeight = this.grayBg.height;
+    }
 
     start () {
         this.calcPiecePos();

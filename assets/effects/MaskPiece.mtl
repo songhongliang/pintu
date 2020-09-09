@@ -1,0 +1,32 @@
+{
+  "__type__": "cc.Material",
+  "_name": "MaskPiece",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "0b582890-a4a7-4444-93c0-8f5b0d63081b"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "defines": {
+        "USE_TEXTURE": true
+      },
+      "props": {
+        "offset": {
+          "__type__": "cc.Vec4",
+          "x": 0,
+          "y": 0,
+          "z": 0.7615,
+          "w": 0.5054
+        },
+        "originTexture": {
+          "__uuid__": "30ac56d8-d733-43a4-a79d-9cc84bc704d2"
+        },
+        "texture": {
+          "__uuid__": "0d0e00ba-3f52-47eb-b422-788bf75ba57c"
+        }
+      }
+    }
+  }
+}
